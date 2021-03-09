@@ -1,5 +1,20 @@
 <html>
     <body>
-        <h1>ciao sono una risorsa statica</h1>
+        Ciaone
     </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+
+        $.ajax({
+            url : "http://ec2-3-121-199-55.eu-central-1.compute.amazonaws.com:3000/somma",
+            type : "get",
+            data: {a : 23, b: 3},
+            success: function(res){
+                console.log ("successo: ", res);
+            } ,
+            error: function(res){
+                console.log ("errore: ", res);
+            } 
+        })
+    </script>
 </html>
